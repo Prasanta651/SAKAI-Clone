@@ -1,5 +1,6 @@
 * {
-    //If you set box-sizing: border-box; on an element, padding and border are included in the width and height:
+    //If you set box-sizing: border-box; on an element, 
+    //padding and border are included in the width and height:
     box-sizing: border-box;
 }
 
@@ -8,22 +9,22 @@ html {
     font-size: $scale;
 }
 
-// body {
-//     font-family: var(--font-family);
-//     color: var(--text-color);
-//     background-color: var(--surface-ground);
-//     margin: 0;
-//     padding: 0;
-//     min-height: 100%;
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-// }
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--surface-ground);
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 a {
     text-decoration: none !important;
     color: var(--primary-color);
 }
 
-// .layout-wrapper {
-//     min-height: 100vh;
-// }
+.layout-wrapper {
+    min-height: 100vh;
+}

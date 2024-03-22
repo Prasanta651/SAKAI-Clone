@@ -108,7 +108,7 @@
             order: 3;
         }
 
-        .layout-topbar-menu {
+        .layout-profileSidebar-menu {
             margin-left: 0;
             position: absolute;
             flex-direction: column;
@@ -123,7 +123,7 @@
             -webkit-animation: scalein 0.15s linear;
             animation: scalein 0.15s linear;
 
-            &.layout-topbar-menu-mobile-active {
+            &.layout-profileSidebar-menu-mobile-active {
                 display: block
             }
 
