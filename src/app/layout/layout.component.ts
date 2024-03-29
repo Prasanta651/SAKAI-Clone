@@ -1,10 +1,10 @@
 import { OnDestroy, Renderer2, ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
-import { LayoutService } from './topbar/service/layout.service';
+import { LayoutService } from './service/layout.service';
 import { Router } from '@angular/router';
 import { TopbarComponent } from './topbar/topbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
@@ -18,7 +18,7 @@ export class LayoutComponent implements OnDestroy{
 
   profileMenuOutsideClickListener: any;
 
-  @ViewChild(AppSidebarComponent) appSidebar!: AppSidebarComponent;
+  @ViewChild(SidebarComponent) appSidebar!: SidebarComponent;
 
   @ViewChild(TopbarComponent) appTopbar!: TopbarComponent;
 
