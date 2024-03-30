@@ -12,10 +12,10 @@ export interface AppConfig {
 
 interface LayoutState {
   staticMenuDesktopInactive: boolean;
+  staticMenuMobileActive: boolean;
   overlayMenuActive: boolean;
   profileSidebarVisible: boolean;
   configSidebarVisible: boolean;
-  staticMenuMobileActive: boolean;
   menuHoverActive: boolean;
 }
 
@@ -54,21 +54,22 @@ export class LayoutService {
    * that converts a subject or another type of observable into a new observable. 
    * The new observable hides the original observable's methods like next(), error(), and complete(), 
    * allowing only subscription to it.
-   * */ 
+   * */
 
   configUpdate$ = this.configUpdate.asObservable();
 
   overlayOpen$ = this.overlayOpen.asObservable();
 
   constructor() {
-    effect(() => {
-      const config = this.config();
-      if (this.updateStyle(config)) {
-        this.changeTheme();
-      }
-      this.changeScale(config.scale);
-      this.onConfigUpdate();
-    });
+    // TODO do lated when need
+    // effect(() => {
+    //   const config = this.config();
+    //   if (this.updateStyle(config)) {
+    //     this.changeTheme();
+    //   }
+    //   this.changeScale(config.scale);
+    //   this.onConfigUpdate();
+    // });
   }
 
   onConfigUpdate() {
@@ -77,27 +78,30 @@ export class LayoutService {
   }
 
   onMenuToggle() {
-    if(this.isOverlay()) {
-      this.state.overlayMenuActive = !this.state.overlayMenuActive;
-      if(this.state.overlayMenuActive) {
-        this.overlayOpen.next(null)
-      }
-    }
+    // TODO
+    // if (this.isOverlay()) {
+    //   this.state.overlayMenuActive = !this.state.overlayMenuActive;
+    //   if (this.state.overlayMenuActive) {
+    //     this.overlayOpen.next(null)
+    //   }
+    // }
 
-    if(this.isDesktop()) {
+    if (this.isDesktop()) {
       this.state.staticMenuDesktopInactive = !this.state.staticMenuDesktopInactive;
-    } else {
-      this.state.staticMenuMobileActive = !this.state.staticMenuMobileActive;
+    } 
+    //TODO
+    // else {
+    //   this.state.staticMenuMobileActive = !this.state.staticMenuMobileActive;
 
-      if(this.state.staticMenuMobileActive) {
-        this.overlayOpen.next(null);
-      }
-    }
+    //   if (this.state.staticMenuMobileActive) {
+    //     this.overlayOpen.next(null);
+    //   }
+    // }
   }
 
   showProfileSidebar() {
     this.state.profileSidebarVisible = !this.state.profileSidebarVisible;
-    if(this.state.profileSidebarVisible) {
+    if (this.state.profileSidebarVisible) {
       this.overlayOpen.next(null);
     }
   }
@@ -112,7 +116,7 @@ export class LayoutService {
 
   updateStyle(config: AppConfig) {
     return (
-      config.theme !== this._config.theme || 
+      config.theme !== this._config.theme ||
       config.colorScheme !== this._config.colorScheme
     )
   }
@@ -131,7 +135,7 @@ export class LayoutService {
             : el
       ).join('/');
 
-      this.replaceThemeLink(newHref);
+    this.replaceThemeLink(newHref);
   }
 
   replaceThemeLink(href: string) {

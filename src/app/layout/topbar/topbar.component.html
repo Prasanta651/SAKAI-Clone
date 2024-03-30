@@ -4,11 +4,11 @@
         <span>SAKAI</span>
     </a>
     <!-- TODO menu toggle -->
-    <button #menubutton class="p-link layout-menu-button layout-topbar-button">
+    <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
         <i class="pi pi-bars"></i>
     </button>
 
-    <!-- toggle button -->
+    <!-- toggle button -->  
     <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button" (click)="layoutService.showProfileSidebar()">
         <i class="pi pi-ellipsis-v"></i>
     </button>

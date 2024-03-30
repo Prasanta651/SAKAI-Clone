@@ -28,3 +28,19 @@ a {
 .layout-wrapper {
     min-height: 100vh;
 }
+
+// custom scrollbar
+::-webkit-scrollbar {
+    width: 0.3em;
+    height: 0.7em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 6px rgba(161, 152, 152, 0.3);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #dee2e6;
+    //outline: 1px solid slategrey;
+    border-radius: 4px;
+  }

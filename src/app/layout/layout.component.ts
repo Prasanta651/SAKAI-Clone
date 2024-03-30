@@ -44,6 +44,13 @@ export class LayoutComponent implements OnDestroy{
     }
   }
 
+  get containerClass() {
+    return {
+      'layout-static': this.layoutService.config().menuMode === 'static',
+      'layout-static-inactive': this.layoutService.state.staticMenuDesktopInactive && this.layoutService.config().menuMode === 'static',
+    }
+  }
+
   ngOnDestroy(): void {
       
   }
