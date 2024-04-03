@@ -15,7 +15,9 @@ import { Subscription } from "rxjs";
             <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
         </a>
 
-        <a *ngIf="(item.routerLink && !item.items)" (click)="itemClick($event)">
+        <a *ngIf="(item.routerLink && !item.items)" (click)="itemClick($event)" [routerLink]="item.routerLink"
+        [routerLinkActiveOptions]="item.routerLinkActiveOptions||{ paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' }"
+        routerLinkActive="active-route" tabindex="0" >
             <i [ngClass]="item.icon" class="layout-menuitem-icon"></i>
             <span>{{ item?.label }}</span>
             <!-- dropdown arrow icon -->

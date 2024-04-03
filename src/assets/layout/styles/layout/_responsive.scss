@@ -2,13 +2,22 @@
 
 @media(min-width: 992px) {
     .layout-wrapper {
-        &.layout-static-inactive {
-            .layout-sidebar {
-                transform: translateX(-100%);
-                left: 0;
+        &.layout-static {
+            .layout-main-container {
+                margin-left: 300px;
             }
-
-            // TODO
+            
+            &.layout-static-inactive {
+                .layout-sidebar {
+                    transform: translateX(-100%);
+                    left: 0;
+                }
+    
+                .layout-main-container {
+                    margin-left: 0;
+                    padding-left: 2rem;
+                }
+            }
         }
     }
 }
@@ -18,7 +27,7 @@
         // TODO
 
         .layout-sidebar {
-            // transform: translateX(-100%);
+            transform: translateX(-100%);
             left: 0;
             top: 0;
             height: 100vh;

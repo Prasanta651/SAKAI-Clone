@@ -68,20 +68,25 @@
             .layout-menuitem-icon {
                 margin-right: .5rem;
             }
-            //set the toggler button to right side
+            //set the toggler button to right side(dropdown error icon)
             .layout-submenu-toggler {
                 font-size: 75%;
                 margin-left: auto;
                 transition: transform $transitionDuration;
             }
 
-            // TODO need to add .active-route
+            &.active-route {
+                font-weight: 700;
+                color: var(--primary-color);
+            }
 
             &:hover {
                 background-color: var(--surface-hover);
             }
 
-            // TODO focus style
+            &:focus {
+                @include focused-inset();
+            }
         }
 
         ul {
