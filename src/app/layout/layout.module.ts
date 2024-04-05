@@ -8,6 +8,7 @@ import { MenuComponent } from './sidebar/menu/menu.component';
 import { MenuitemCopmonent } from './sidebar/menuitem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -23,7 +24,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   exports: [LayoutComponent]
 })
