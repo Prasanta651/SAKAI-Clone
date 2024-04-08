@@ -44,3 +44,25 @@ a {
     //outline: 1px solid slategrey;
     border-radius: 4px;
   }
+
+  //make priority for prime custom style
+  .p-button {
+    font-size: 1rem !important;
+    border-radius: 6px !important;
+  }
+
+  .p-button.p-button-icon-only.p-button-rounded {
+    border-radius: 50% !important;
+    height: 3rem;
+}
+
+
+//custom menu style
+.p-menu .p-menuitem-link { 
+  padding: 0.75rem 1.25rem !important;
+  color: #4b5563;
+
+  .pi { 
+    margin-right: 1rem;
+  }
+}

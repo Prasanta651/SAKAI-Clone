@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../service/products.service';
 import { Product } from '../../api/product';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,12 +12,29 @@ export class DashboardComponent {
 
   products!: Product[];
 
+  items!: MenuItem[];
+
   chartData: any;
 
   constructor(private productService: ProductsService) {}
 
   ngOnInit() {
     this.productService.getProductsSmall().then(data => this.products = data);
+
+    // this.items = [
+    //   { label: 'Add New', icon: 'pi pi-fw pi-plus' },
+    //   { label: 'Remove', icon: 'pi pi-fw pi-minus' }
+    // ];
+    this.items = [
+      {
+          label: 'New',
+          icon: 'pi pi-fw pi-plus',
+      },
+      {
+          label: 'Delete',
+          icon: 'pi pi-fw pi-trash'
+      }
+  ];
   }
 
   initChart() {
