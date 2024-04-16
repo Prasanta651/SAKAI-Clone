@@ -16,25 +16,18 @@ export class DashboardComponent {
 
   chartData: any;
 
+  chartOptions: any;
+
   constructor(private productService: ProductsService) {}
 
   ngOnInit() {
     this.productService.getProductsSmall().then(data => this.products = data);
 
-    // this.items = [
-    //   { label: 'Add New', icon: 'pi pi-fw pi-plus' },
-    //   { label: 'Remove', icon: 'pi pi-fw pi-minus' }
-    // ];
     this.items = [
-      {
-          label: 'New',
-          icon: 'pi pi-fw pi-plus',
-      },
-      {
-          label: 'Delete',
-          icon: 'pi pi-fw pi-trash'
-      }
-  ];
+      { label: 'Add New', icon: 'pi pi-fw pi-plus' },
+      { label: 'Remove', icon: 'pi pi-fw pi-minus' }
+    ];
+    this.initChart()
   }
 
   initChart() {
@@ -62,7 +55,37 @@ export class DashboardComponent {
             borderColor: documentStyle.getPropertyValue('--green-600'),
             tension: .4
         }
-    ]
+      ]
     }
+
+    this.chartOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: textColor
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: textColorSecondary
+          },
+          grid: {
+            color: surfaceBorder,
+            drawBorder: false
+          }
+        },
+        y: {
+          ticks: {
+            color: textColorSecondary
+          },
+          grid: {
+            color: surfaceBorder,
+            drawBorder: false
+          }
+        }
+      },
+    };
   }
 }

@@ -7,7 +7,7 @@ import { MenuModule } from 'primeng/menu';
 
 import { DashboardRoutingModule } from './dashboard-routing.module'
 import { DashboardComponent } from './dashboard.component';
-
+import { ChartModule } from 'primeng/chart';
 @NgModule({
   declarations: [DashboardComponent],
   imports: [
@@ -17,6 +17,7 @@ import { DashboardComponent } from './dashboard.component';
     StyleClassModule,
     ButtonModule,
     DashboardRoutingModule,
+    ChartModule
   ]
 })
 export class DashboardModule { }
