@@ -9,6 +9,7 @@ import { MenuitemCopmonent } from './sidebar/menuitem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarComponent,
     MenuComponent,
     MenuitemCopmonent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
