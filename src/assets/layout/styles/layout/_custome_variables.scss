@@ -52,6 +52,10 @@
     color: var(--teal-500) !important;
 }
 
+.text-primary-500 {
+    color: var(--primary-500) !important;
+}
+
 .text-white {
     color: #ffffff !important;
 }
@@ -124,6 +128,14 @@
     list-style: none ;
 }
 
+.flex-1 {
+    flex: 1 1 0%;
+}
+
+.d-block {
+    display: block;
+}
+
 //width
 .w-3 {
     width: 3rem !important;
@@ -152,6 +164,10 @@
     height: 100%;
 }
 
+.h-2rem {
+    height: 2rem !important;
+}
+
 .h-3rem {
     height: 3rem;
 }
@@ -163,6 +179,15 @@
 //margin
 .ml-2 {
     margin-left: 0.5rem;
+}
+
+//width
+.w-2 {
+    width: 2rem !important;
+}
+
+.w-20rem {
+    width: 20rem !important;
 }
 
 .ml-3 {

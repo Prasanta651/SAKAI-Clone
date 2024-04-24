@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
-
+import { ConfigModule } from './config/config.module';
 
 
 @NgModule({
@@ -27,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     BrowserAnimationsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfigModule
   ],
   exports: [LayoutComponent]
 })
