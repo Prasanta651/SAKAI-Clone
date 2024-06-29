@@ -62,14 +62,14 @@ export class LayoutService {
 
   constructor() {
     // TODO do lated when need
-    // effect(() => {
-    //   const config = this.config();
-    //   if (this.updateStyle(config)) {
-    //     this.changeTheme();
-    //   }
-    //   this.changeScale(config.scale);
-    //   this.onConfigUpdate();
-    // });
+    effect(() => {
+      const config = this.config();
+      if (this.updateStyle(config)) {
+        this.changeTheme();
+      }
+      this.changeScale(config.scale);
+      this.onConfigUpdate();
+    });
   }
 
   onConfigUpdate() {
@@ -104,6 +104,10 @@ export class LayoutService {
     if (this.state.profileSidebarVisible) {
       this.overlayOpen.next(null);
     }
+  }
+
+  showConfigSidebar() {
+    this.state.configSidebarVisible = true;
   }
 
   isOverlay() {

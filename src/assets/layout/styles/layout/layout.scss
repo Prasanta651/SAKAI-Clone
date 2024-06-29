@@ -1,6 +1,11 @@
 @import './variables';
 @import './mixins';
 @import './main';
+@import './custome_variables';
 @import './topbar';
 @import './menu';
-@import './responsive'
+@import './config';
+@import './content';
+@import './layout-footer';
+@import './responsive';
+@import './utils'

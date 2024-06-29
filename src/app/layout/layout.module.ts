@@ -7,6 +7,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuComponent } from './sidebar/menu/menu.component';
 import { MenuitemCopmonent } from './sidebar/menuitem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
+import { ConfigModule } from './config/config.module';
 
 
 @NgModule({
@@ -17,10 +21,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidebarComponent,
     MenuComponent,
     MenuitemCopmonent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule,
+    HttpClientModule,
+    ConfigModule
   ],
   exports: [LayoutComponent]
 })

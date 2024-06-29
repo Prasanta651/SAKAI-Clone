@@ -1,6 +1,6 @@
 <div class="layout-topbar">
     <a class="layout-topbar-logo" routerLink="">
-        <img src="../../../assets/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="logo">
+        <img src="../../../assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="logo">
         <span>SAKAI</span>
     </a>
     <!-- TODO menu toggle -->
@@ -22,8 +22,8 @@
             <i class="pi pi-user"></i>
             <span>Profile</span>
         </button>
-        <!-- TODO [routerLink]="'/documentation'" need to add -->
-        <button class="p-link layout-topbar-button" >
+        
+        <button class="p-link layout-topbar-button" [routerLink]="'/documentation'">
             <i class="pi pi-cog"></i>
             <span>Settings</span>
         </button>
